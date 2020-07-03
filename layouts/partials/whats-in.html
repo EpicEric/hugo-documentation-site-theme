@@ -5,7 +5,7 @@
 
 {{- if .Params.toc -}}
   <nav role="toc" class="toc bg-light-gray pl3 pr3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">In this section: </p>
+    <p class="f5 b mb3">{{ or (i18n "whats-in-header") "In this section:" }}</p>
       {{ .TableOfContents }}
   </nav>
 {{- end -}}

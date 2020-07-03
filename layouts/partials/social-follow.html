@@ -6,49 +6,49 @@
 </div>
 {{ $icon_size := "32px" }}
 {{ with .Param "facebook" }}
-<a href="{{ . }}" target="_blank" class="link-transition facebook link dib z-999 pt3 pt0-l mr1" title="Facebook link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition facebook link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "facebook-link") "Facebook link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/facebook.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "twitter" }}
-<a href="{{ . }}" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "twitter-link") "Twitter link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/twitter.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "instagram" }}
-<a href="{{ . }}" target="_blank" class="link-transition instagram link dib z-999 pt3 pt0-l mr1" title="Instagram link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition instagram link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "instagram-link") "Instagram link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/instagram.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "youtube" }}
-<a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr1" title="Youtube link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "youtube-link") "Youtube link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "linkedin" }}
-<a href="{{ . }}" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "linkedIn-link") "LinkedIn link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/linkedin.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "github" }}
-<a href="{{ . }}" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "github-link") "Github link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/github.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "gitlab" }}
-<a href="{{ . }}" target="_blank" class="link-transition gitlab link dib z-999 pt3 pt0-l mr1" title="Gitlab link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition gitlab link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "gitlab-link") "Gitlab link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/gitlab.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
 {{ with .Param "medium" }}
-<a href="{{ . }}" target="_blank" class="link-transition medium link dib z-999 pt3 pt0-l mr1" title="Medium link" rel="noopener" aria-describedby="new-window-0">
+<a href="{{ . }}" target="_blank" class="link-transition medium link dib z-999 pt3 pt0-l mr1" title="{{ or (i18n "medium-link") "Medium link"  }}" rel="noopener" aria-describedby="new-window-0">
   {{ partial "svg/medium.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>

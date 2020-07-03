@@ -1,0 +1,14 @@
+{{ if .IsTranslated }}
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+  <p class="f5 b mb3">{{ or (i18n "languages-header") "Languages" }}</p>
+  <ul class="pa0 list">
+    {{ range .Translations }}
+      <li class="mb2">
+         <a href="{{ .Permalink }}">
+           {{ .Language.LanguageName }}
+         </a>
+       </li>
+     {{ end }}
+   </ul>
+</div>
+{{ end }}

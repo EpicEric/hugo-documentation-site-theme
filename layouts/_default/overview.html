@@ -1,6 +1,7 @@
 {{ define "main" }}
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
     <div class="order-0 w-20 dn db-l doc-menu" id="doc-menu">
+      {{ partial "translations.html" . }}
       {{ partial "search.html" }}
       {{ partial "toc.html" . }}
     </div>
@@ -11,6 +12,7 @@
         </div>
         <div class="documentation-copy center mw7" id="content">
           <header class="mt4 w-100">
+            {{- partial "banner-outdated-translation.html" . -}}
             <p class="f6 b helvetica tracked">
                 {{/*
                 CurrentSection allows us to use the section title instead of inferring from the folder.

@@ -5,7 +5,7 @@
 
 {{- if .Params.toc -}}
   <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">What's in this document</p>
+    <p class="f5 b mb3">{{ or (i18n "toc-header") "What's in this document" }}</p>
       {{ .TableOfContents }}
   </div>
 {{- end -}}
@@ -19,15 +19,15 @@
 
 {{ with $related }}
   <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
+    <p class="f5 b mb3">{{ or (i18n "related-header") "Related" }}</p>
     <ul class="pa0 list">
      {{ range . }}
-       <li  class="mb2">
+       <li class="mb2">
           <a href="{{ .RelPermalink }}">
             {{- .Title -}}
           </a>
         </li>
       {{ end }}
     </ul>
-</div>
+  </div>
 {{ end }}

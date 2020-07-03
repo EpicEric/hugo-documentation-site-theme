@@ -93,7 +93,7 @@ Pony.Search = (function() {
     resultsContainer.empty();
     resultsContainer.append(
         $("<header>", {class: "mt4 w-100"}).append(
-            $("<p>", {class: "f6 b helvetica tracked", text: "SEARCH RESULTS"}))
+            $("<p>", {class: "f6 b helvetica tracked", text: "{{ or (i18n "search-results") "SEARCH RESULTS" }}"}))
     );
     var resList = $("<ul>", {id: "search-result-list"});
 
@@ -151,7 +151,7 @@ Pony.Search = (function() {
   };
 
   that.initLunr = function(onSuccess) {
-      $.getJSON("/index.json")
+      $.getJSON("{{ relLangURL "/index.json" }}")
         .done(function(index) {
            //console.log("downloaded search-index");
            that.pages = index;

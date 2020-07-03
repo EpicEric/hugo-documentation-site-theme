@@ -7,7 +7,7 @@
 
 {{ with $related }}
   <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">See also:</p>
+    <p class="f5 b mb3">{{ or (i18n "see-also-header") "See also:" }}</p>
     <ul class="pa0 list">
      {{ range . }}
        <li  class="mb2">
